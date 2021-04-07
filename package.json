@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/matija077/typescript-isprobavanja/issues"
   },
-  "homepage": "https://github.com/matija077/typescript-isprobavanja#readme"
+  "homepage": "https://github.com/matija077/typescript-isprobavanja#readme",
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
 }
