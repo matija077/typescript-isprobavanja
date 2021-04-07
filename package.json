@@ -1,0 +1,22 @@
+{
+  "name": "typescript-isprobavanja",
+  "version": "0.0.0",
+  "description": "typescript tries",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matija077/typescript-isprobavanja.git"
+  },
+  "keywords": [
+    "Typescript"
+  ],
+  "author": "Matija Prša",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matija077/typescript-isprobavanja/issues"
+  },
+  "homepage": "https://github.com/matija077/typescript-isprobavanja#readme"
+}
