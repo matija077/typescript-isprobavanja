@@ -20,6 +20,11 @@
   },
   "homepage": "https://github.com/matija077/typescript-isprobavanja#readme",
   "devDependencies": {
+    "@types/node": "^14.14.37",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "node": "^15.12.0"
   }
 }
