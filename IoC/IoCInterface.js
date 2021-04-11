@@ -4,7 +4,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from) {
         to[j] = from[i];
     return to;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var IoCContainer = /** @class */ (function () {
     function IoCContainer() {
         this.dependencies = {};
@@ -37,4 +37,4 @@ var IoCContainer = /** @class */ (function () {
     IoCContainer._instance = new IoCContainer();
     return IoCContainer;
 }());
-exports.default = IoCContainer;
+exports["default"] = IoCContainer;
