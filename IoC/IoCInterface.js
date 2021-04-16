@@ -1,10 +1,5 @@
 "use strict";
-var __spreadArray = (this && this.__spreadArray) || function (to, from) {
-    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
-    return to;
-};
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var IoCContainer = /** @class */ (function () {
     function IoCContainer() {
         this.dependencies = {};
@@ -14,7 +9,7 @@ var IoCContainer = /** @class */ (function () {
         get: function () {
             return IoCContainer._instance;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     IoCContainer.prototype.register = function (name, dependencies, implementation) {
@@ -22,7 +17,7 @@ var IoCContainer = /** @class */ (function () {
             throw new Error("depenedncy alread yexists");
         }
         var dependencyImplementations = this.getDependenciesImplementation(dependencies);
-        this.dependencies[name] = new (implementation.bind.apply(implementation, __spreadArray([void 0], dependencyImplementations)))();
+        this.dependencies[name] = new (implementation.bind.apply(implementation, [void 0].concat(dependencyImplementations)))();
     };
     IoCContainer.prototype.resolve = function (name) {
         if (!this.dependencies[name]) {
@@ -37,4 +32,4 @@ var IoCContainer = /** @class */ (function () {
     IoCContainer._instance = new IoCContainer();
     return IoCContainer;
 }());
-exports["default"] = IoCContainer;
+exports.default = IoCContainer;

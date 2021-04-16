@@ -1,6 +1,9 @@
 "use strict";
-exports.__esModule = true;
-var IoCInterface_1 = require("./IoCInterface");
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var IoCInterface_1 = __importDefault(require("./IoCInterface"));
 var ConcreteA = /** @class */ (function () {
     function ConcreteA() {
     }
@@ -35,7 +38,7 @@ var dependenciesEnum;
     dependenciesEnum["IDepB"] = "IDepB";
     dependenciesEnum["IDepC"] = "IDepC";
 })(dependenciesEnum || (dependenciesEnum = {}));
-var container = IoCInterface_1["default"].instance;
+var container = IoCInterface_1.default.instance;
 container.register(dependenciesEnum.IDepA, [], ConcreteA);
 container.register(dependenciesEnum.IDepB, [], ConcreteB);
 container.register(dependenciesEnum.IDepC, [dependenciesEnum.IDepA, dependenciesEnum.IDepB], ConcreteC);
