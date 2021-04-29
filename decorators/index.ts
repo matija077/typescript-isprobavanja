@@ -10,7 +10,7 @@ function decorated(target: Object, methodName: string, descriptior: PropertyDesc
 }
 
 class Base implements IBase {
-    @decorated
+    //@decorated
     foo() {
         console.log("foo");
     }
@@ -20,7 +20,25 @@ class Base implements IBase {
     }
 }
 
+class Mid extends Base {
+    private test: string;
+    private test2: any;
+    test3:string;
+    static test4: number = 40;
+    constructor(t: string) {
+        super();
+        this.test = t;
+        this.test2 = 2;
+        this.test3 = "aa";
+    }
+
+    static staticMethod() {}
+    normalMethod(){}
+    private privateMethod(){}
+}
+
 const base = new Base();
+let base2 = new Base();
 
 base.foo();
 console.log(base.foo);
